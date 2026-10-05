@@ -1,0 +1,26 @@
+# Criando uma matriz 3x2 com valores digitados pelo usuário
+linhas = 3
+colunas = 2
+matriz = []
+maior_numero = None
+
+print("Digite os números para preencher a matriz (3x2):")
+for i in range(linhas):
+    linha = []
+    for j in range(colunas):
+        # Solicita o número ao usuário
+        num = float(input(f"Digite o valor para a posição [{i}][{j}]: "))
+        linha.append(num)
+        
+        # Verifica se é o maior número
+        if maior_numero is None or num > maior_numero:
+            maior_numero = num
+    matriz.append(linha)
+
+# Exibe a matriz resultante
+print("\nMatriz gerada:")
+for linha in matriz:
+    print(linha)
+
+# Exibe o maior número encontrado
+print(f"\nO maior número digitado foi: {maior_numero}")
